@@ -15,6 +15,8 @@ public class Lab1_1 {
         
         Info.printAll(strani);
         
+        System.out.println("");
+        
         
     }
     
