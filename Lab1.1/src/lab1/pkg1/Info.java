@@ -11,15 +11,15 @@ public class Info {
     private final double plotnostCountry=countryPopulation/countrySquare;
     
     public Info(String countryName, double countrySquare, int countryPopulation){
-        this.countryName=countryName;
-        this.countrySquare=countrySquare;
-        this.countryPopulation=countryPopulation;   
+        setCountryName(countryName);
+        setCountrySquare(countrySquare);
+        setCountryPopulation(countryPopulation); 
     }
     
     public Info(String countryName, double countrySquare, int countryPopulation, String capitalName, int capitalPopulation){
         this(countryName, countrySquare, countryPopulation);
-        this.capitalName=capitalName;
-        this.capitalPopulation=capitalPopulation;
+        setCapitalName(capitalName);
+        setCapitalPopulation(capitalPopulation);
     }
     
     
@@ -48,7 +48,8 @@ public class Info {
      }
      
      public void setCountryName(String countryName){
-         if (countryName != null) {this.countryName=countryName;} 
+         
+         if (countryName != null && !countryName.trim().isEmpty()) {this.countryName=countryName;} 
          else {throw new IllegalArgumentException();}   
      }
      
@@ -64,7 +65,7 @@ public class Info {
      
     
     public void setCapitalName(String capitalName){
-         if (capitalName != null) {this.capitalName=capitalName;} 
+         if (capitalName != null && !capitalName.trim().isEmpty()) {this.capitalName=capitalName;} 
          else {throw new IllegalArgumentException();}   
      }
     
